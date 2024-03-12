@@ -17,7 +17,6 @@
         private void OnButton20Percentage_Clicked(System.Object sender, System.EventArgs e)
         {
             Slider.Value = 20;
-
         }
 
         private void OnRoundDownButton_Clicked(System.Object sender, System.EventArgs e)
@@ -30,9 +29,9 @@
             double totalResult = roundedResult + amount;
 
 
-            TipValue.Text = roundedResult.ToString() + "R$";
-            TotalValue.Text = totalResult.ToString() + "R$";
-            TipPercentageValue.Text = percent.ToString() + '%';
+            TipValue.Text = "R$" +roundedResult.ToString();
+            TotalValue.Text = "R$" + totalResult.ToString();
+            TipPercentageValue.Text = percent.ToString();
 
         }
 
@@ -43,12 +42,12 @@
             double roundedResult = Math.Ceiling(result);
             double amount = Convert.ToDouble(entry.Text.ToString());
             double percent = Math.Ceiling(Slider.Value);
-            double totalResult = roundedResult + amount;
+            double totalResult =  roundedResult + amount;
 
 
-            TipValue.Text = roundedResult.ToString() + "R$";
-            TotalValue.Text = totalResult.ToString() + "R$";
-            TipPercentageValue.Text = percent.ToString() + '%';
+            TipValue.Text = "R$" + roundedResult.ToString();
+            TotalValue.Text = "R$" + totalResult.ToString();
+            TipPercentageValue.Text = percent.ToString();
 
         }
         private double CalculateTip()
@@ -63,6 +62,13 @@
             
 
 
+
+        }
+
+        private void Slider_ValueChanged(System.Object sender, Microsoft.Maui.Controls.ValueChangedEventArgs e)
+        {
+
+            TipPercentageValue.Text = Math.Round(Slider.Value).ToString() + "%";
 
         }
     }
