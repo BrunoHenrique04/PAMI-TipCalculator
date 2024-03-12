@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                x:Name="NameBox"
+                Text="Bill"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="" />
+
+            <Entry x:Name="entry"
+                Placeholder="EnterAmount"
+                Keyboard="Numeric"
+                   />
+            
+            <Label
+                x:Name="TipBox"
+                Text="Tip"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                x:Name="TipValue"
+                Text="0.00"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="" />
+
+            <Label
+                x:Name="TotalBox"
+                Text="Total"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="" />
+
+            <Label
+                x:Name="TotalValue"
+                Text="0.00"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="" />
+
+            <Label
+                x:Name="TipPercentageBox"
+                Text="Tip Percentage"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="" />
+
+            <Label
+                x:Name="TipPercentageValue"
+                Text="15%"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="" />
+
+            <Slider 
+                x:Name="Slider"
+                Minimum="0"
+                Maximum="100"
+                />
+
+            <Button
+                x:Name="Button15Percentage"
+                Text="15%" 
+                SemanticProperties.Hint=""
+                HorizontalOptions="Fill" 
+                Clicked="OnButton15Percentage_Clicked"
+                />
+            <Button
+                
+                x:Name="Button20Percentage"
+                Text="20%" 
+                SemanticProperties.Hint=""
+                HorizontalOptions="Fill"
+                Clicked="OnButton20Percentage_Clicked"
+                />
+            <Button
+                x:Name="RoundDownButton"
+                Text="Round Down" 
+                SemanticProperties.Hint=""
+                HorizontalOptions="Fill" 
+                Clicked="OnRoundDownButton_Clicked"
+                />
+            <Button
+                x:Name="RoundUpButton"
+                Text="Round Up" 
+                SemanticProperties.Hint=""
+                HorizontalOptions="Fill" 
+                Clicked="RoundUpButton_Clicked"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
