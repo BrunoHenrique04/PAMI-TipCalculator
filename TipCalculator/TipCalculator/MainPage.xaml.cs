@@ -29,9 +29,9 @@
             double totalResult = roundedResult + amount;
 
 
-            TipValue.Text = "R$" +roundedResult.ToString();
+            TipValue.Text = "R$" + roundedResult.ToString();
             TotalValue.Text = "R$" + totalResult.ToString();
-            TipPercentageValue.Text = percent.ToString();
+            TipPercentageValue.Text = percent.ToString() + "%";
 
         }
 
@@ -47,7 +47,7 @@
 
             TipValue.Text = "R$" + roundedResult.ToString();
             TotalValue.Text = "R$" + totalResult.ToString();
-            TipPercentageValue.Text = percent.ToString();
+            TipPercentageValue.Text = percent.ToString() + "%";
 
         }
         private double CalculateTip()
