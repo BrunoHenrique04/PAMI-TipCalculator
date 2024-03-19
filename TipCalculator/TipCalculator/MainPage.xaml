@@ -4,47 +4,56 @@
              x:Class="TipCalculator.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="10.0"
-            Margin="2"
+        <Grid
+            RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+            ColumnDefinitions="*, *"
+            
             >
+
 
             <Label
                 x:Name="NameBox"
                 Text="Bill"
-                SemanticProperties.Description="" />
+                SemanticProperties.Description="" 
+                Grid.Row="0"
+                Grid.Column="0"
+                />
+            
             <Entry x:Name="entry"
                 Placeholder="EnterAmount"
                 Keyboard="Numeric"
                 Text="0"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
                    />
 
-            <HorizontalStackLayout
-                >
                 <Label
                     x:Name="TipBox"
                     Text="Tip"      
                     Margin="0,0,10,0"
                     Padding="4"
+                    Grid.Row="2"
+                    Grid.Column="0"
                     />
 
-                <Label
+            <Label
                     x:Name="TipValue"
                     Text="0.00"
                     SemanticProperties.Description=""
                     Margin="0,0,10,0"
-                    Padding="4"
+                    Grid.Row="2"
+                    Grid.Column="1"
                     />
-            </HorizontalStackLayout>
-
-            <HorizontalStackLayout
-                >
+            
             <Label
                 x:Name="TotalBox"
                 Text="Total"
                 SemanticProperties.Description="" 
                 Margin="0,0,10,0"
-                Padding="4"
+                Padding="3"
+                Grid.Row="3"
+                Grid.Column="0"
                 />
 
             <Label
@@ -53,16 +62,18 @@
                 SemanticProperties.Description="" 
                 Margin="0,0,10,0"
                 Padding="4"
+                Grid.Row="3"
+                Grid.Column="1"
                 />  
 
-            </HorizontalStackLayout>
-            <HorizontalStackLayout>
             <Label
                 x:Name="TipPercentageBox"
                 Text="Tip Percentage"
                 SemanticProperties.Description=""
                 Margin="0,0,10,0"
                 Padding="4"  
+                Grid.Row="4"
+                Grid.Column="0"
                 />
 
             <Label
@@ -71,18 +82,20 @@
                 SemanticProperties.Description=""
                 Margin="0,0,10,0"
                 Padding="4" 
-                
+                Grid.Row="4"
+                Grid.Column="1"
                 />
-            </HorizontalStackLayout>
             <Slider 
                 x:Name="Slider"
                 Minimum="0"
                 Maximum="100"
                 ValueChanged="Slider_ValueChanged"
                 Margin="0,0,10,0"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
                 />
             
-            <HorizontalStackLayout>
                 <Button
                 x:Name="Button15Percentage"
                 Text="15%" 
@@ -90,8 +103,10 @@
                 HorizontalOptions="Fill" 
                 Clicked="OnButton15Percentage_Clicked"
                 Margin="10.0"
+                 Grid.Row="6"
+                 Grid.Column="0"
                 />
-                <Button
+            <Button
                 
                 x:Name="Button20Percentage"
                 Text="20%" 
@@ -99,10 +114,10 @@
                 HorizontalOptions="Fill" 
                 Clicked="OnButton20Percentage_Clicked"
                 Margin="10.0"
+                Grid.Row="6"
+                Grid.Column="1"
                 />
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
-                >
+            
             <Button
                 x:Name="RoundDownButton"
                 Text="Round Down" 
@@ -110,6 +125,8 @@
                 HorizontalOptions="FillAndExpand" 
                 Clicked="OnRoundDownButton_Clicked"
                 Margin="10.0"
+                Grid.Row="7"
+                Grid.Column="0"
                 />
             <Button
                 x:Name="RoundUpButton"
@@ -118,10 +135,11 @@
                 HorizontalOptions="FillAndExpand" 
                 Margin="10.0"
                 Clicked="RoundUpButton_Clicked"
+                Grid.Row="7"
+                Grid.Column="1"
                 />
-            </HorizontalStackLayout>
 
-        </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 
 </ContentPage>
