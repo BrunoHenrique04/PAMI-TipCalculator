@@ -16,6 +16,7 @@
             <Entry x:Name="entry"
                 Placeholder="EnterAmount"
                 Keyboard="Numeric"
+                Text="0"
                    />
 
             <HorizontalStackLayout
@@ -119,6 +120,7 @@
                 Clicked="RoundUpButton_Clicked"
                 />
             </HorizontalStackLayout>
+
         </VerticalStackLayout>
     </ScrollView>
 

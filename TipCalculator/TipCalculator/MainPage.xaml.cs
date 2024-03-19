@@ -1,4 +1,6 @@
-﻿namespace TipCalculator
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace TipCalculator
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +9,7 @@
         public MainPage()
         {
             InitializeComponent();
+
         }
 
         private void OnButton15Percentage_Clicked(System.Object sender, System.EventArgs e)
@@ -52,7 +55,6 @@
         }
         private double CalculateTip()
         {
-
             double amount = Convert.ToDouble(entry.Text.ToString());
             double percent = Slider.Value;
  
@@ -60,8 +62,6 @@
             double result = amount * (percent / 100);
             return result;
             
-
-
 
         }
 
