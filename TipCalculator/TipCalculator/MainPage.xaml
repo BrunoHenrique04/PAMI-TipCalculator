@@ -4,96 +4,121 @@
              x:Class="TipCalculator.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout
+            Padding="10.0"
+            Margin="2"
+            >
+
             <Label
                 x:Name="NameBox"
                 Text="Bill"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="" />
-
             <Entry x:Name="entry"
                 Placeholder="EnterAmount"
                 Keyboard="Numeric"
                    />
-            
-            <Label
-                x:Name="TipBox"
-                Text="Tip"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
-                x:Name="TipValue"
-                Text="0.00"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="" />
+            <HorizontalStackLayout
+                >
+                <Label
+                    x:Name="TipBox"
+                    Text="Tip"      
+                    Margin="0,0,10,0"
+                    Padding="4"
+                    />
 
+                <Label
+                    x:Name="TipValue"
+                    Text="0.00"
+                    SemanticProperties.Description=""
+                    Margin="0,0,10,0"
+                    Padding="4"
+                    />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                >
             <Label
                 x:Name="TotalBox"
                 Text="Total"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="" />
+                SemanticProperties.Description="" 
+                Margin="0,0,10,0"
+                Padding="4"
+                />
 
             <Label
                 x:Name="TotalValue"
-                Text="0.00"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="" />
+                Text="0.00" 
+                SemanticProperties.Description="" 
+                Margin="0,0,10,0"
+                Padding="4"
+                />  
 
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
             <Label
                 x:Name="TipPercentageBox"
                 Text="Tip Percentage"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="" />
+                SemanticProperties.Description=""
+                Margin="0,0,10,0"
+                Padding="4"  
+                />
 
             <Label
                 x:Name="TipPercentageValue"
                 Text="15%"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="" />
-
+                SemanticProperties.Description=""
+                Margin="0,0,10,0"
+                Padding="4" 
+                
+                />
+            </HorizontalStackLayout>
             <Slider 
                 x:Name="Slider"
                 Minimum="0"
                 Maximum="100"
                 ValueChanged="Slider_ValueChanged"
+                Margin="0,0,10,0"
                 />
-
-            <Button
+            
+            <HorizontalStackLayout>
+                <Button
                 x:Name="Button15Percentage"
                 Text="15%" 
                 SemanticProperties.Hint=""
                 HorizontalOptions="Fill" 
                 Clicked="OnButton15Percentage_Clicked"
+                Margin="10.0"
                 />
-            <Button
+                <Button
                 
                 x:Name="Button20Percentage"
                 Text="20%" 
                 SemanticProperties.Hint=""
-                HorizontalOptions="Fill"
+                HorizontalOptions="Fill" 
                 Clicked="OnButton20Percentage_Clicked"
+                Margin="10.0"
                 />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                >
             <Button
                 x:Name="RoundDownButton"
                 Text="Round Down" 
                 SemanticProperties.Hint=""
-                HorizontalOptions="Fill" 
+                HorizontalOptions="FillAndExpand" 
                 Clicked="OnRoundDownButton_Clicked"
+                Margin="10.0"
                 />
             <Button
                 x:Name="RoundUpButton"
                 Text="Round Up" 
                 SemanticProperties.Hint=""
-                HorizontalOptions="Fill" 
+                HorizontalOptions="FillAndExpand" 
+                Margin="10.0"
                 Clicked="RoundUpButton_Clicked"
                 />
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
